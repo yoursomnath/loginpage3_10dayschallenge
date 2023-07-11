@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable= no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Login Page 3</title>
+</head>
+<body>
+        <div class="container">
+
+
+          <div class="first-div">
+
+            <div class="form-div">
+              <h1>Hi!</h1>
+              <form action="#">
+                <input type="email" name="mail" placeholder="Email" class="input-mail">
+                <input type="submit" name="submit" value="Continue" class="submit-btn login-btn">
+              </form>
+              <p>or</p>
+              <div class="login-with-others">
+                  <div class="lwo-box"><i class="fa-brands fa-square-facebook"></i><p>Continue with Facebook</p></div>
+                  <div class="lwo-box"><i class="fa-brands fa-google"></i><p>Continue with Google</p></div>
+                  <div class="lwo-box"><i class="fa-brands fa-apple"></i><p>Continue with Apple</p></div>
+              </div>
+              <p class="s-up">Don't Have an account? <a href="#" class="signUpBtn">Sign up </a></p>
+              <a href="#">Forgot your password ?</a>
+            </div>
+
+          </div>
+
+
+          <div class="second-div">
+            <div class="back-btn1"><i class="fa-solid fa-chevron-left"></i></div>
+             <div class="login-div">
+              <h1>Login in</h1>
+              <form action="#">
+                <div class="user-dtls">
+                  <div class="dp"></div>
+                  <div class="dtls">
+                    <div class="name">Your Name</div>
+                    <div class="mail">yourmail@cmail.com</div>
+                  </div>
+                </div>
+                <input type="password" name="pass" placeholder="Password" required>
+                <input type="submit" name="submit" value="Continue" class="submit-btn">
+              </form>
+              <a href="#">Forgot your password ?</a>
+            </div>
+
+          </div>
+
+
+          <div class="third-div">
+            <div class="back-btn2"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="sign-up">
+              <h1>Sign up</h1>
+              <form action="#">
+                <p class="s-up-text">Looks like you don't have an account <br>
+                Let's create a new acoount for you.</p>
+                <input type="email" name="mail" placeholder="Email" required>
+                <input type="password" name="pass" placeholder="Password" required>
+                <p class="t-and-c">By selecting Agree and continue below, <br>I agree to <a href="#">Terms of Service and Privacy Policy</a></p>
+
+                <input type="submit" name="submit" value="Agree and continue" class="submit-btn">
+              </form>
+            </div>
+
+          </div>
+
+
+      </div>  
+</body>
+<script type="text/javascript">
+  let firstDiv= document.querySelector(".first-div");
+  let loginDiv = document.querySelector(".second-div");
+  let signUpDiv= document.querySelector(".third-div");
+  let signUpBtn = document.querySelector(".signUpBtn");
+  let backBtn2 = document.querySelector(".back-btn2");
+  let backBtn1 = document.querySelector(".back-btn1");
+  let loginBtn = document.querySelector(".login-btn");
+  let inputBox = document.querySelector(".input-mail");
+
+  signUpBtn.addEventListener("click", event =>{
+    signUpDiv.style.left = "0%"
+  })
+  backBtn1.addEventListener("click", event=>{
+    loginDiv.style.left = "-100%";
+  })
+  backBtn2.addEventListener("click", event=>{
+    signUpDiv.style.left = "100%";
+  })
+  loginBtn.addEventListener("click", event =>{
+    if(inputBox.value == ""){
+      alert("Please Enter Mail");
+    }
+    else{
+      loginDiv.style.left = "0";
+    }
+  })
+</script>
+</html>
